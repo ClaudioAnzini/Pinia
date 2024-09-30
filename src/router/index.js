@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import { useProductStore } from '@/stores/product'
 import productDetailView from '../views/productDetailView.vue'
 
 const router = createRouter({
@@ -12,7 +11,7 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/product/.id',
+      path: '/product/:id',
       name: 'ProdoctDetailView',
       component: productDetailView,
       props: true
